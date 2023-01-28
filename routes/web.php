@@ -25,7 +25,14 @@ Route::get('/', function () {
 
 Route::view('about', '/about');
 Route::view('contact', '/contact');
-Route::view('users', '/users');
+
+// Route::get('/users/{name}', function($name){
+//     return view('users',["urlName"=>$name]);
+// });
+
+// Route::view('users', '/users');
+
+Route::get('users/{name}', [UserController::class, 'userName']);
 
 Route::get('user', [UserController::class, 'show']);
 // Route::get('user/{id}',[UserController::class,'show']);

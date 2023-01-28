@@ -10,6 +10,10 @@ class UserController extends Controller
         return "Hello Test" ;
     }
 
+    function userName($name){
+        return view('users', ['urlName'=>$name]) ;
+    }
+
     // function show($id){
     //     return $id ;
     // }
